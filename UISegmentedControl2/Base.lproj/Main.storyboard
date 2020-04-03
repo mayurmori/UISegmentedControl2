@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4n9-QA-gc7">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vmo-qO-T6G">
+            <objects>
+                <viewController id="4n9-QA-gc7" customClass="ViewController" customModule="UISegmentedControl2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUV-wE-62t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-Wp-mCi">
+                                <rect key="frame" x="146.66666666666666" y="45" width="120.99999999999997" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="4n9-QA-gc7" eventType="valueChanged" id="P5F-YQ-Gmo"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Segment Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZO-k9-OXc">
+                                <rect key="frame" x="117.66666666666669" y="98" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kXa-Wp-mCi" firstAttribute="centerX" secondItem="aUV-wE-62t" secondAttribute="centerX" id="GPC-IR-kKC"/>
+                            <constraint firstItem="FZO-k9-OXc" firstAttribute="centerX" secondItem="kXa-Wp-mCi" secondAttribute="centerX" id="QtX-ao-5As"/>
+                            <constraint firstItem="FZO-k9-OXc" firstAttribute="top" secondItem="kXa-Wp-mCi" secondAttribute="bottom" constant="25" id="abM-OH-WJX"/>
+                            <constraint firstItem="kXa-Wp-mCi" firstAttribute="top" secondItem="Y1M-ZY-0Pl" secondAttribute="top" constant="25" id="hRR-ki-RgC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y1M-ZY-0Pl"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbl" destination="FZO-k9-OXc" id="O5D-l4-Fz0"/>
+                        <outlet property="segmentedControl" destination="kXa-Wp-mCi" id="3Q2-LI-CPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PFO-7M-fgm" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
